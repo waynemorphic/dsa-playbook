@@ -26,7 +26,7 @@ public class SubArrayDivision {
         // }
         for (int i = 0;  i + m <= len; i++){
             for(int j = 0; j < m; j++){
-                System.out.println(arr.get(j));
+                System.out.println(arr.get(i + j));
                 sum += arr.get(i + j);
             }
             if (sum == d){
