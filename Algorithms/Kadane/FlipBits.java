@@ -40,7 +40,7 @@ public class FlipBits {
         for (int i = 0; i < n; i++){
             // Check if ith value is 0 or not
             // if the value is 0, the curSum += 1 else curSum += -1
-            curSum += (arr[i] == 1 ? 1 : -1);
+            curSum += (arr[i] == 0 ? 1 : -1);
 
             // finding max between curSum and max and updating max
             max = Math.max(max, curSum);
@@ -58,7 +58,12 @@ public class FlipBits {
         return max + count;
     }
     public static void main(String[] args){
-
+        int[] arr = {1, 0, 0, 1, 0};
+        int[] arr1 = {1, 1, 1, 0};
+        int[] arr2 = {0, 0, 1, 0, 0};
+        System.out.println(FlipBits.flipBits(arr));
+        System.out.println(FlipBits.flipBits(arr1));
+        System.out.println(FlipBits.flipBits(arr2));
     }
     
 }
